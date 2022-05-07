@@ -4,12 +4,307 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Bitcoin goes back to 2009.">
+    <link rel="shortcut icon" href="ikonekle" type="image/x-icon">
+    <meta name="keywords" content="bitcoin, 2009, crypto,metaverse">
+    <meta name="author" content="rebitcoin">
+    <title>reBitcoin $REBTC</title>
 
+        <style>
+            *{
+                scroll-behavior: smooth;
+            }
+            ::selection{
+                background-color: aqua;
+                color: antiquewhite;
+            }
+            body{
+                background-color: #F1F7FD;
+                margin:0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-items: center;
+                justify-content: center;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                color: black;
+            }
+            a:visited{
+                color: black;
+            }
+            .header ul{
+                background: linear-gradient(to right,#F1F7FD 1%,aqua 98%,#F1F7FD);
+                border-top: 5px #2793FF solid;
+                line-height: 70px;
+            }
+            .header ul li{
+                list-style-type: none;
+                display: inline;
+                margin: 10px 50px;
+                font-size: 2em;
+            }
+            .header ul li a{
+                text-decoration: none;
+                text-overflow: clip;
+                user-select: none;
+                z-index: 5;
+                padding: 15px;
+                padding-bottom: 35px;
+                text-shadow: 2px 2px 2px #2793FF;
+                transition: all .3s;
+            }
+            .header ul li a:hover{
+                background-color: #2793FF;
+                border-radius: 0 0 50% 50%;
+                border-top: 5px aqua solid;
+                
+                text-shadow: 2px 2px 2px aqua;
+                color: white;
+            }
+            .logo{
+                display:flex;
+                border-radius: 50%;
+
+                width: 120px;
+                height: 120px;
+            }
+            .header{
+                position: sticky;
+                top: 0  ;
+                display: flex;
+                justify-content:center;
+                align-items: center;
+                z-index: 5;
+            }
+ 
+            .page{
+                background: linear-gradient(to right,#F1F7FD 1%,aqua 98%,#F1F7FD);
+                border-top: 5px #2793FF solid;
+                width: 100%;
+                height: 100vh;
+                padding-top:  60px;
+                padding-left: 40px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                align-content: center;
+                justify-items: center;
+                justify-content: center;
+                border-top-left-radius: 6%;
+                
+
+                
+                text-shadow: 3px 3px 3px #2793FF;
+            }
+            .container{
+                padding-top: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content:center;
+                align-items: center;
+                align-content: center;
+            }
+            .content{
+                width: 90%;
+                height: 100%;
+            }
+            #home{
+                width: 50px;
+                height: 50px;
+                text-align: center;
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                user-select: none;
+                display: inline-block;
+                border: 1px #2793FF solid;
+                border-top-left-radius: 50%;
+                background-color: transparent;
+                padding: 5px;
+                box-shadow: 3px 3px 0px #2793FF;
+                transition: all .3s;
+                z-index: 15;
+                
+            }
+            #home:hover{
+                transform: translate(-8px, -8px);
+                box-shadow: 8px 8px 0px #2793FF;
+            }
+            #getStarted{
+                margin-top: -140px;
+                column-gap: 125px;
+                flex-direction: column;
+                z-index: 1;
+            }
+            #burnEvents div{
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                align-items: center;
+            }
+            .shake{
+                font-size: 2em;
+                text-shadow: 3px 3px 3px #2793FF;
+                animation: 1s anim ease-in-out infinite;
+            }
+            @keyframes anim {
+                0%,100%{
+                    transform:translateX(3px);
+                    transform:translateY(3px);
+                    
+
+                    
+                }
+                50%{
+                    transform:translateX(23px);
+                    transform:translateY(23px);
+                }
+            }
+
+            #buySell{
+                flex-direction: column;
+                font-size: 2em;
+                color: white;
+                text-shadow: -2px -2px 0 black,3px 3px 3px #2793FF;
+            }
+            .adress{
+                font-size: .4em;
+                
+                user-select: all;
+            }
+            #buySell::selection{
+                background: #6F43BD;
+            }
+            .adress::after{
+                display: block;
+                width: 100%;
+                content: url("img/uplow.png");
+                border-radius: 8%;
+                
+                color: #6F43BD;
+                font-weight: 800;
+                line-height: 64px;
+                text-shadow:3px 3px 3px #000000;
+                border: 2px white solid;
+                border-bottom: none;
+                text-align: center;
+                font-size: 2em;
+            }
+            #roadMap{
+                font-size: 1.3em;
+                
+                transition: 3s all;
+            }
+            #roadMap li:hover{
+                font-size: 1.2em;
+                transition: .3s all;
+                text-shadow: 2px 2px 3px white;
+            }
+            .pcswp img:hover{
+                -webkit-filter: drop-shadow(0px 0px 115px rgb(255, 0, 140));
+                    filter: drop-shadow(0px 0px 115px rgb(255, 0, 140));
+            }
+            .pcswp::before
+            {
+                content: "Buy from Pancakeswap";
+            }
+            .pcswp::after
+            {
+                content: "Copy contrat & click";
+            }
+            .red{
+                
+                text-shadow: 0px 0px 3px red;
+            }
+            .green{
+                
+                text-shadow: 0px 0px 3px green;
+            }
+            .logo:hover{
+                content: url("img/logo.png");
+            }
+        </style>
+<link rel="icon" href="img/logo.png">
 </head>
 <body>
 
-        <h3>reBTC</h3>
+    <div class="container">
+        <div class="header">
+            <img class="logo" src="img/giphy.gif" alt="">
+            <ul>
 
-</body>
+                
+                <li><a href="#getStarted">Get Started</a></li>
+                <li><a href="#roadMap">RoadMap</a></li>
+                <li><a href="#burnEvents">Burn Events</a></li>
+                <li><a href="#buySell">Buy & Sell</a></li>
+                    
+            </ul>
+        </div>
+        <div class="content">
+            
+    <div class="page" id="getStarted">  
+
+        <h1 class="red"> Bitcoin was 00,09 $ in 2010 <br> now ~40.000,00 $ in 2022.</h1>
+        <h1 class="green"> reBitcoin is now 00,09 $ in 2022<br> who knows in future...</h1>
+        <h3 class="shake"> DONT MISS SECOND CHANCE</h3>
+        
+    </div>
+    <div class="page" id="roadMap">
+        <div><img src="img/rmp.png" style="top:0;left: 250px;
+            position: fixed;"></div>
+        <ul><h3>Roadmap</h3>
+            <li>HODL
+                <ul>
+                    <li>Free distributing </li>
+                    <li>Mining</li>
+                </ul>
+            </li>
+            <li>Self Identification Step
+                <ul>
+                    <li>Own blockchain</li>
+                    <li>Web 3.0 payment wallet</li>
+                    <li>Mining network</li>
+                    <li>Singularity DEX</li>
+                </ul>
+            </li>
+            <li>Grow Community
+                <ul>
+                    <li>HODL milestone</li>
+                    <li>DEX listings</li>
+                    <li>CEX listings</li>
+                    <li>Major CEX partnership</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="page" id="burnEvents">
+<div>
+
+    <h1>The total supply of reBitcoin is 21 million. just like BitCoin.</h1>
+    <h2>We will burn all missing amount. just like Bitcoin's missing amount.</h2>
+    <h2>We will burn every week our Max-Supply.</h2>
+
+    <h3>Burn Missing Coin Amount</h3>
+    <p>
+        A 2017 report from Chainalysis, a forensics company, estimated that between 2.78 million and 3.79 million bitcoins have been lost. That’s out of a total of nearly 19 million circulating today, and a maximum supply of 21 million tokens when Bitcoin is fully mined.
+    </p>
+    <h3>Bitcoin Pizza Day Specials</h3>
+
+    <p>10,000 burns special for world bitcoin day every first day of week. </p>
+</div>
+</div>
+    <div class="page" id="buySell">
+        
+    <div class="pcswp">  <a href="https://pancakeswap.finance/swap" target="_blank"><img src="img/pancakeswap-cake-logo.svg" width="30%" alt=""></a> </div>
+        
+        <div><h1>Contract Adress:</h1></div>
+        <div class="adress"><h1>0xBe807Dddb074639cD9fA61b47676c064fc50D62C</h1></div>
+    </div>
+    
+        </div>
+    </div>
+
+<a href="fingerprint.html"><img id="home" src="img/up.png"   alt="goUp"></a>
 </html>
